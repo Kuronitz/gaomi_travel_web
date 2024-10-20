@@ -1,0 +1,232 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-position: left top;
+    background-image: url("../image/2.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+#head_time {
+    width: 360px;
+    height: 45px;
+    float: right;
+    border: 0px solid;
+    padding: 0 1rem;
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(to right, #3a6186, #89253e);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    color: white;
+    padding: 0 1rem;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    font-weight: bold;
+    width: 128px;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar ul li a {
+    width: 128px;
+    line-height: 45px;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.navbar ul li a:hover {
+    color: #59496a;
+}
+
+.navbar ul li ul {
+    position: absolute;
+    display: none;
+    width: 128px;
+    line-height: 45px;
+}
+
+.navbar ul li ul li {
+    background-color: #59496a;
+}
+
+.navbar ul li ul li a:hover {
+    color: white;
+}
+
+.navbar ul li ul li:hover {
+    background-color: #752323;
+}
+
+.navbar ul li:hover ul {
+    display: block;
+}
+
+#footer {
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    font-family: Arial;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.61);
+    backdrop-filter: blur(5px);
+    position: relative;
+    top: 150px;
+    width: 800px;
+    height: auto;
+    text-indent: 0px;
+    padding: 30px 30px;
+    margin: 0px 20px;
+}
+
+.content h2 {
+    text-indent: 50px;
+    text-align: justify;
+    margin: 10px 80px;
+    color: antiquewhite;
+}
+
+.content p {
+    text-indent: 50px;
+    text-align: justify;
+    margin: 10px 80px;
+    color: #fff;
+}
+
+.locablur {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    top: 150px;
+}
+
+.swipe {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.swipe ul {
+    padding: 0;
+    width: calc(800px * 3);
+    transition: 0.5s;
+}
+
+.swipe li {
+    float: left;
+    width: 800px;
+    height: 500px;
+    list-style: none;
+    line-height: 500px;
+    font-size: 50px;
+}
+
+.swipe li:nth-child(1) {
+    background-image: url("../image/4.jpg");
+}
+
+.swipe li:nth-child(2) {
+    background-image: url("../image/5.jpg");
+}
+
+.swipe li:nth-child(3) {
+    background-image: url("../image/6.jpg");
+}
+
+.swipe label[for^="indicator"] {
+    position: absolute;
+    top: 450px;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.swipe label[for="indicator1"] {
+    left: 44%;
+}
+
+.swipe label[for="indicator2"] {
+    left: 49%;
+}
+
+.swipe label[for="indicator3"] {
+    left: 54%;
+}
+
+#indicator1:checked ~ ul {
+    margin-left: 0;
+}
+
+#indicator2:checked ~ ul {
+    margin-left: -800px;
+}
+
+#indicator3:checked ~ ul {
+    margin-left: -1600px;
+}
+
+#indicator1:checked ~ label[for="indicator1"] {
+    background-color: #fff;
+}
+
+#indicator2:checked ~ label[for="indicator2"] {
+    background-color: #fff;
+}
+
+#indicator3:checked ~ label[for="indicator3"] {
+    background-color: #fff;
+}
+
+.video {
+    position: absolute;
+}
